@@ -11,17 +11,22 @@
 <br>
 <center>
 <div>
-	<form method="post">
-
+	<th:block th:include="mensagemValidacao"></th:block>
+	<div class="container formLaboratorio">
+	<form class="container" method="post">
 	Nome do Aluno: <input type="text" name="nomeAluno">
-	<br>
-	Laboratório Disponível: <input type="text" name="labDisponivel">
-	<br>
-	Horário: <input type="time" name="horario">
-	<button type="submit">Registrar Chamado</button>
+		<div class="row">
+		<div class="input-field col s6">
+	Laboratório: <input type="text" name="labDisponivel">
+		</div>
+		<div class="input-field col s3">
+	Horário Disponível: <input type="time" name="horario">
+		</div>
+		<button class="waves-effect waves-light btn" type ="submit">Registrar Chamado</button>
 
-</form>
-</div>
+	</form>
+	</div>
+	</div>
 </center>
 </body>
 </html>
