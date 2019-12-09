@@ -26,18 +26,18 @@
   	</header>
 	
 	<div  th:each="laboratorio : ${laboratorio}" class="container detalhesLaboratorio">
-		<h5>Detalhes do Laboratórios</h5>
+		<h5>Detalhes do Laboratorios</h5>
 		<div class="row">
-			<p>Nome do laboratório: <span th:text="${laboratorio.nomeLaboratorio}"></span></p>
-			<p>Sala do laboratório: <span th:text="${laboratorio.salaLaboratorio}"></span></p>
-			<p>Horário: <span th:text="${laboratorio.horarioLaboratorio}"></span></p
+			<p>Nome do laboratorio: <span th:text="${laboratorio.nomeLaboratorio}"></span></p>
+			<p>Sala do laboratorio: <span th:text="${laboratorio.salaLaboratorio}"></span></p>
+			<p>Horario: <span th:text="${laboratorio.horarioLaboratorio}"></span></p>
 		</div>
 	</div>
 	<th:block th:include="mensagemValidacao"></th:block>
 	<div class="container formServidor">
 		<form method="post">
 			Nome do Servidor: <input type="text" value="" name="nomeServidor"/>
-			Matrícula: <input type="text" value="" name="matricula"/>
+			Matricula: <input type="text" value="" name="matricula"/>
 			<button class="waves-effect waves-light btn" type="submit">Reservar</button>
 		</form>
 	</div>
