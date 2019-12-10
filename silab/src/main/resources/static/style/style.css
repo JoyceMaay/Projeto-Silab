@@ -1,0 +1,73 @@
+.detalhesLaboratorio{
+	box-shadow: 0px 0px 5px grey; 
+	padding-top: 20px;
+	padding-left: 20px;
+	margin-botton: 60px;
+}
+
+.box{
+border-radius: 4px;
+padding: 30px;
+margin-top: 20px;
+margin: 195px;
+border: 2px solid #87CEFA;
+width: 750px;
+font-weight: bold;
+background-color: #87CEEB;
+color: white;
+
+}
+
+nav  {
+	
+	
+background-color: #87CEEB;
+
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #87CEEB;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+.formLaboratorio {
+box-shadow: 0px 0px 2px grey;
+padding-top: 25px;
+padding-left: 35px;
+padding-right: 15px;
+padding-bottom: 25px;
+margin-top: 60px;
+font-size: 15pt;
+font-family: Verdana;
+
+}
+
+body{
+	background-image: url("img.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+}

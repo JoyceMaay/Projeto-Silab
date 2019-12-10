@@ -11,36 +11,34 @@
 
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <link rel="stylesheet" href="style/styleCss.css"/>
+      <link rel="stylesheet" href="style/style.css"/>
 </head>
-	<body>
-	
+<body>
 	<header>
 		<nav>
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Laboratórios Disponíveis</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="/cadastrarLaboratorio" class="waves-effect waves-light btn"><i class="material-icons left"> add_circle_outline</i>Reservar Produto</a> </a></li>
-      </ul>
-    </div>
-  </nav>
-  
-	</header>
-		<table class="container"> 
+    		<div class="nav-wrapper">
+      			<a href="#" class="brand-logo">Laboratórios Disponíveis</a>
+      			<ul id="nav-mobile" class="right hide-on-med-and-down">
+        			<li><a href="/cadastrarLaboratorio" class="waves-effect waves-light btn"><i class="material-icons left"> add_circle_outline</i>Reservar Produto</a> </a></li>
+      			</ul>
+    		</div>
+  		</nav>
+  	</header>
+	<table class="container"> 
 		<thead> 
 			<tr> 
 				<th>Laboratório:</th>
 			</tr>
 		</thead> 
-			<tbody>
-			<tr th:each="laboratório : ${laboratórios}">
-				<td><a th:href="${(#mvc.url('EC#detalheslaboratorios').arg(0, laboratorios.codigo)).build()}"><span th:text="${laboratorio.nome}"></span></a></td>
-				<td><span th:text="${produto.nome}"></span></td>
-				<td><a class="waves-effect waves-light btn-small" th:href="${(#mvc.url('EC#deletarLaboratorio').arg(0, laboratorio.codigo)).build()}"><i class="material-icons left">delete</i></td>
-		</tr>				
-	</tbody>
-</table>
+		<tbody>
+			<tr th:each="laboratorio : ${laboratorio}">
+				<td><a th:href="${(#mvc.url('SR#detalheslaboratorios').arg(0, laboratorio.codigo)).build()}">
+				<span th:text="${laboratorio.nome}"></span></a></td>
+			</tr>				
+		</tbody>
+	</table>
+	
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<script type="text/javascript" src="materialize/js/materialize.min.js"></script>	
-		</body>
+</body>
 </html>

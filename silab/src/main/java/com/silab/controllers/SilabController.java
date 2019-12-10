@@ -24,7 +24,7 @@ public class SilabController {
 	
 	@GetMapping("/cadastrarLab")
 	public String form() {
-		return "silab/laboratorios/formLaboratorio";
+		return "silab/laboratorios/formLaboratorios";
 	}
 	
 	@RequestMapping(value = "/{codigo}", method = RequestMethod.GET)

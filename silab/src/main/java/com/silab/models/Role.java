@@ -11,31 +11,29 @@ import org.springframework.security.core.GrantedAuthority;
 @Entity
 public class Role implements GrantedAuthority{
 
+	private static final long serialVersionUID = -646885117809906935L;
+
 	@Id
+	private long id;
 	private String nomeRole;
 
 	@ManyToMany
     private List<Usuario> usuarios;
-	
-	public String getNomeRole() {
-		return nomeRole;
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
 	}
 
 	public void setNomeRole(String nomeRole) {
 		this.nomeRole = nomeRole;
 	}
-	 
-	public List<Usuario> getUsuarios() {
-		return usuarios;
-	}
-
-	public void setUsuarios(List<Usuario> usuarios) {
-		this.usuarios = usuarios;
-	}
 
 	@Override
 	public String getAuthority() {
-		// TODO Auto-generated method stub
 		return this.nomeRole;
 	}	
 }

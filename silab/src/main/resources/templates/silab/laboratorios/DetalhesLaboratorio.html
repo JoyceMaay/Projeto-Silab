@@ -29,33 +29,12 @@
 		<h5>Detalhes do Laboratorios</h5>
 		<div class="row">
 			<p>Nome do laboratorio: <span th:text="${laboratorio.nomeLaboratorio}"></span></p>
-			<p>Sala do laboratorio: <span th:text="${laboratorio.salaLaboratorio}"></span></p>
-			<p>Horario: <span th:text="${laboratorio.horarioLaboratorio}"></span></p>
+			<p>Sala do laboratorio: <span th:text="${laboratorio.sala}"></span></p>
+			<p>Horario: <span th:text="${laboratorio.horario}"></span></p>
 		</div>
-	</div>
-	<th:block th:include="mensagemValidacao"></th:block>
-	<div class="container formServidor">
-		<form method="post">
-			Nome do Servidor: <input type="text" value="" name="nomeServidor"/>
-			Matricula: <input type="text" value="" name="matricula"/>
-			<button class="waves-effect waves-light btn" type="submit">Reservar</button>
-		</form>
+		<button class="waves-effect waves-light btn" type="submit">Reservar</button>
 	</div>
 	
-	<table class="container tabelaServidor">
-		<thead>
-			<tr>
-				<th>Nome Servidor</th>
-				<th>Matricula</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr th:each="servidor : ${servidores}">
-				<td><span th:text="${servidor.nomeServidor}"></span></td>
-				<td><span th:text="${servidor.matricula}"></span></td>				
-			</tr>
-		</tbody>	
-	</table>	
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<script type="text/javascript" src="materialize/js/materialize.min.js"></script>	
 </body>

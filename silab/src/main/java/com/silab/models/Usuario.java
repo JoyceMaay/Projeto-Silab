@@ -3,13 +3,12 @@ package com.silab.models;
 import java.util.Collection;
 import java.util.List;
 
-import javax.management.relation.Role;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
-import org.hibernate.annotations.LazyCollection;
-import org.hibernate.annotations.LazyCollectionOption;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -29,6 +28,12 @@ public class Usuario implements UserDetails{
 	private String senha;
 
 	@ManyToMany
+	@JoinTable(
+		       name = "usuarios_roles",
+		       joinColumns = @JoinColumn(
+		         name = "usuario_id", referencedColumnName = "id"),
+		       inverseJoinColumns = @JoinColumn(
+		         name = "role_id", referencedColumnName = "id")) 
 	private List<Role> roles;
 	
 	public Long getId() {

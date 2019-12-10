@@ -1,8 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html
+xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+>
 <head>
 <meta charset="UTF-8">
-<title>SILAB</title>
+<title>Início</title>
 <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
       <!--Import materialize.css-->
@@ -10,17 +14,17 @@
 
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<link rel="stylesheet" href="style/css.css">
+	<link rel="stylesheet" href="style/style.css">
+
 </head>
 <body>
 <nav>
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo">SILAB</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-      	<li><a href="/inicio" class="waves-effect waves-light btn"><i class="material-icons left">home</i></a></li>
-      	<li><a href="/cadastrarLab" class="waves-effect waves-light btn"><i class="material-icons left">desktop_windows</i></a></li>
-      	<li><a href="/reservarLab" class="waves-effect waves-light btn"><i class="material-icons left">desktop_windows</i></a></li>
-        <li><a href="/login" class="waves-effect waves-light btn"><i class="material-icons left">format_list_bulleted</i>Fazer Login</a></li>
+      	<li><a href="#" class="brand-logo">IFSOL</a></li>
+        <li style="float:right"><a href="/paginaInicial">INÍCIO</a></li>
+        <li style="float:right"><a href="/silab/laboratorios/DetalhesLaboratorio">RESERVAR LABORATÓRIO</a></li>
+        <li style="float:right"><a href="/cadastrarLab">CADASTRAR LABORATÓRIO</a></li>
       </ul>
     </div>
   </nav>
