@@ -29,7 +29,6 @@ public class Usuario implements UserDetails{
 	private String senha;
 
 	@ManyToMany
-	@LazyCollection(LazyCollectionOption.FALSE)
 	private List<Role> roles;
 	
 	public Long getId() {
